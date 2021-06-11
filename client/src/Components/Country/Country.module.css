@@ -1,0 +1,12 @@
+.container {
+	background-color: lightgrey;
+	min-width: 18rem;
+	min-height: 15rem;
+	border: 1px solid black;
+	padding: 1rem;
+}
+
+.flag {
+	width: 18rem;
+	height: 12rem;
+}
