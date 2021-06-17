@@ -22,11 +22,11 @@ export function getCountryByID(countryID) {
 	}
 }
 
-export function getCountryByName(countryName) {
+export function filterCountries({name, filter, order, offset}) {
 	return function(dispatch){
-		return axios.get(`${BACKEND_URI}/countries?name=${countryName}`)
+		return axios.get(`${BACKEND_URI}/countries?name=${name}&filter=${filter}&order=${order}&offset=${offset}`)
 			.then(({data}) => dispatch({
-				type: "GET_COUNTRY_BY_NAME",
+				type: "FILTER_COUNTRIES",
 				payload: data
 			}))
 	}

@@ -15,8 +15,8 @@ export default function Landing() {
 			dispatch(getAllCountries());
 		});
 	return (
-		<div>
-			<Link to = '/home' > Home </Link>
+		<div className = {styles.container}>
+			<Link to = '/home'> Home </Link>
 		</div>
 	)
 }

@@ -1,12 +1,33 @@
 .container {
-	background-color: lightgrey;
-	min-width: 18rem;
-	min-height: 15rem;
-	border: 1px solid black;
-	padding: 1rem;
+	margin: 0rem 3rem;
+	width: 16rem;
 }
 
 .flag {
-	width: 18rem;
-	height: 12rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 16rem;
+	height: 16rem;
+	border: 1px solid black;
+	border-radius: 9999px;
+}
+
+.container:hover > .info {
+	visibility: visible;
+}
+
+.info {
+	visibility: hidden;
+	font-size: larger;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0.2rem;
+	
+}
+
+.link {
+	color: black;
+	text-decoration: none;
 }

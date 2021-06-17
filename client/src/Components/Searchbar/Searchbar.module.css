@@ -1,0 +1,42 @@
+.container {
+	display: flex;
+	width: fit-content;
+	margin: 0 auto;
+	margin-top: 2.5rem;
+	border: 1px solid black;
+	padding: 0.75rem;
+	border-radius: 9999px;
+}
+
+.form {
+	display: flex;
+}
+
+.form > div {
+	margin: 0 0.5rem;
+}
+
+.nameInput {
+	border: none;
+	border-bottom: 1px solid black;
+}
+
+.nameInput:focus{
+	outline: none;
+}
+
+.page {
+  position: fixed;
+  left: 50%;
+  bottom: 5%;
+  transform: scale(1.5) translate(-33%, 0);
+}
+
+.page > button {
+	margin: 0 0.8rem;
+	border-radius: 9999px;
+}
+
+.page > button:focus {
+	outline: none;
+}

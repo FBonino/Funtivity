@@ -17,7 +17,7 @@ export default function rootReducer(state = initialState, action) {
 				...state,
 				detailedCountry: action.payload
 			}
-		case "GET_COUNTRY_BY_NAME":
+		case "FILTER_COUNTRIES":
 			return {
 				...state,
 				loadedCountries: action.payload

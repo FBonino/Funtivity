@@ -2,11 +2,29 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	border-bottom: 1px solid black;
+	border: 2px solid black;
 	padding: 1rem;
-	margin-bottom: 1rem;
+	margin-bottom: 2.5rem;
+	border-radius: 0 0 9999px 9999px;
+	font-size: large;
 }
 
 .addActivity {
 	height: fit-content;
+	border-radius: 9999px;
+	padding: 0.5rem;
+}
+
+.addActivity:hover {
+	cursor: pointer;
+	transform: scale(1.05);
+}
+
+.addActivity:focus {
+	outline: none;
+}
+
+.link {
+	color: black;
+	text-decoration: none;
 }

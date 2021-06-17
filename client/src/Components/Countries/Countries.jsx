@@ -1,5 +1,5 @@
 import React from "react";
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import Country from "../Country/Country";
 import styles from './Countries.module.css';
 

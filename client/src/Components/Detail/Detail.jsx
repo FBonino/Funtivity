@@ -16,7 +16,7 @@ export default function Detail({match}) {
 			<h4> Subregion: {detailedCountry.subregion} </h4>
 			<h4> Area: {detailedCountry.area} m²</h4>
 			<h4> Population: {detailedCountry.population} </h4>
-			<img src = {detailedCountry.flag} />
+			<img src = {detailedCountry.flag} alt = "" />
 			<h4> Activities </h4>
 			<table>
 				<tr>

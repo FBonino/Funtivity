@@ -13,10 +13,10 @@ export default function Home() {
 	return (
 		<div>
 			<Searchbar />
-			<Countries />
 			{
 				displayForm ? <Activity /> : null
 			}
+			<Countries />
 		</div>
 	)
 }

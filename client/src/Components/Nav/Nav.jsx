@@ -8,9 +8,9 @@ export default function Nav() {
 	const dispatch = useDispatch();
 	return (
 		<div className = {styles.container}>
-			<Link to = '/home'> Home </Link>
+			<Link to = '/home' className = {styles.link}> Home </Link>
 			<button onClick = {() => dispatch(displayActivityForm())} className = {styles.addActivity}> Add activity </button>
-			<Link to = '/about'> About </Link>
+			<Link to = '/about' className = {styles.link}> About </Link>
 		</div>
 	)
 }
