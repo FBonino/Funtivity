@@ -5,16 +5,29 @@ const { Op } = require('sequelize');
 const countriesRoutes = Router();
 
 countriesRoutes.get('/', async (req, res) => {
-	let query = req.query.name ? req.query.name[0].toUpperCase() + req.query.name.slice(1) : undefined;
-	let countries = query 
+	let name = req.query.name ? req.query.name[0].toUpperCase() + req.query.name.slice(1) : "";
+	let filter = !req.query.filter ? ["Continent", ""] : req.query.filter.split(',');
+	filter[1] = filter[1] === "All" ? "" : filter[1];
+	let order = req.query.order ? req.query.order.split(',') : ["name", "ASC"];
+	let offset = req.query.offset ? req.query.offset * 10 : 0;
+	let countries = filter[0] === "Continent"
 		? await Country.findAll({
 			attributes: {exclude: ['createdAt', 'updatedAt']},
-			where: {name: {[Op.like]: `%${query}%`}},
-			limit: 10 //offset
+			where: {[Op.and]: [{name: {[Op.like]: `%${name}%`}}, {continent: {[Op.like]: `%${filter[1]}%`}}]},
+			order: [order],
+			limit: 10,
+			offset: offset
 		})
 		: await Country.findAll({
 			attributes: {exclude: ['createdAt', 'updatedAt']},
-			limit: 10
+			where: {name: {[Op.like]: `%${name}%`}},
+			order: [order],
+			limit: 10,
+			offset: offset,
+			include: {
+				model: Activity,
+				where: {difficulty: {[Op.like]: `%${filter[1]}%`}}
+			}
 		})
 	return countries.length ? res.json(countries) : res.status(400).send();
 })

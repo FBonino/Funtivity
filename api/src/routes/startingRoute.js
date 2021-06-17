@@ -5,10 +5,10 @@ const { Country } = require('../db');
 const startingRoute = Router();
 
 startingRoute.get('/', (req, res) => {
-	axios.get(process.env.API_URL)
+	axios.get("https://restcountries.eu/rest/v2/all")
 		.then(({ data }) => {
 			data.forEach(country => {
-				Country.create({
+				return Country.create({
 					id: country.alpha3Code,
 					name: country.name,
 					flag: country.flag,
