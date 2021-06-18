@@ -1,24 +1,36 @@
 .container {
+	background: linear-gradient(217deg, rgb(0, 11, 73), rgb(41, 6, 73) 90%);
 	display: flex;
 	width: fit-content;
 	margin: 0 auto;
 	margin-top: 2.5rem;
-	border: 1px solid black;
 	padding: 0.75rem;
 	border-radius: 9999px;
+	background-color: #222831e7;
+	color: white;
 }
 
 .form {
 	display: flex;
+	align-items: center;
 }
 
 .form > div {
 	margin: 0 0.5rem;
 }
 
+.form > div > select {
+	border-radius: 1rem;
+	margin: 0.2rem;
+	padding: 0.1rem;
+}
+
 .nameInput {
 	border: none;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid white;
+	background-color: inherit;
+	color: white;
+	border-radius: 0;
 }
 
 .nameInput:focus{
@@ -33,10 +45,31 @@
 }
 
 .page > button {
+	background: linear-gradient(217deg, rgb(0, 11, 73), rgb(41, 6, 73) 90%);
 	margin: 0 0.8rem;
 	border-radius: 9999px;
+	color: white;
+	border: none;
+	transform: scale(1.2);
 }
 
 .page > button:focus {
+	outline: none;
+}
+
+.reset {
+	border-radius: 9999px;
+	border: none;
+	background-color: inherit;
+	color: white;
+	font-weight: bold;
+}
+
+.reset:hover {
+	transform: scale(1.2);
+	cursor: pointer;
+}
+
+.reset:focus {
 	outline: none;
 }

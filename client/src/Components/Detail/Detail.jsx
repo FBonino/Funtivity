@@ -10,37 +10,41 @@ export default function Detail({match}) {
 	const [detailedCountry, displayForm] = useSelector(state => [state.detailedCountry, state.displayForm]);
 	return (
 		<div className = {styles.container}>
-			<h3> {detailedCountry.name}, {detailedCountry.id} </h3>
-			<h4> Continent: {detailedCountry.continent} </h4>
-			<h4> Capital: {detailedCountry.capital} </h4>
-			<h4> Subregion: {detailedCountry.subregion} </h4>
-			<h4> Area: {detailedCountry.area} m²</h4>
-			<h4> Population: {detailedCountry.population} </h4>
-			<img src = {detailedCountry.flag} alt = "" />
-			<h4> Activities </h4>
-			<table>
-				<tr>
-					<th> Name </th>
-					<th> Difficulty[1-5] </th>
-					<th> Duration(days) </th>
-					<th> Season </th>
-				</tr>
+			<div className = {styles.detail}>
+				<h2> {detailedCountry.name}, {detailedCountry.id} </h2>
+				<h4> Continent: {detailedCountry.continent} </h4>
+				<h4> Capital: {detailedCountry.capital ? detailedCountry.capital : '-'} </h4>
+				<h4> Subregion: {detailedCountry.subregion ? detailedCountry.subregion : '-'} </h4>
+				<h4> Area: {detailedCountry.area} m²</h4>
+				<h4> Population: {detailedCountry.population} </h4>
+				<img className = {styles.flag} src = {detailedCountry.flag} alt = "" />
+			</div>
+			<div className = {styles.activityTable}>
+				<h3> Activities </h3>
+				<table>
+					<tr>
+						<th className = {styles.name}> Name </th>
+						<th> Difficulty[1-5] </th>
+						<th> Duration (days) </th>
+						<th> Season </th>
+					</tr>
+					{
+						detailedCountry.activities?.map(activity => {
+							return (
+								<tr key = {activity}>
+									<td className = {styles.name}> {activity.name} </td>
+									<td className = {styles.toRight}> {activity.difficulty} </td>
+									<td className = {styles.toRight}> {activity.duration} </td>
+									<td> {activity.season} </td>
+								</tr>
+							)
+						})
+					}
+				</table>
 				{
-					detailedCountry.activities?.map(activity => {
-						return (
-							<tr>
-								<td> {activity.name} </td>
-								<td className = {styles.toRight}> {activity.difficulty} </td>
-								<td className = {styles.toRight}> {activity.duration} </td>
-								<td> {activity.season} </td>
-							</tr>
-						)
-					})
+					displayForm ? <Activity /> : null
 				}
-			</table>
-			{
-				displayForm ? <Activity /> : null
-			}
+				</div>
 		</div>
 	)
 }

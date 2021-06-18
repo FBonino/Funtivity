@@ -1,6 +1,7 @@
 .container {
 	margin: 0rem 3rem;
 	width: 16rem;
+	transition: transform 500ms;
 }
 
 .flag {
@@ -9,8 +10,12 @@
 	background-position: center;
 	width: 16rem;
 	height: 16rem;
-	border: 1px solid black;
-	border-radius: 9999px;
+	border-radius: 50%;
+	box-shadow: inset -25px -25px 40px rgba(0,0,0,.5);
+}
+
+.container:hover {
+	transform: scale(1.05);
 }
 
 .container:hover > .info {
@@ -24,10 +29,4 @@
 	justify-content: center;
 	flex-wrap: wrap;
 	margin: 0.2rem;
-	
-}
-
-.link {
-	color: black;
-	text-decoration: none;
 }

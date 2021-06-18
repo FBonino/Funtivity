@@ -1,26 +1,120 @@
 .container {
-	background-color: grey;
+	background: linear-gradient(217deg, rgb(0, 11, 73), rgb(41, 6, 73) 90%);
 	position: absolute;
 	height: fit-content;
 	width: fit-content;
-	top: 30%;
-	left: 40%;
+	top: 20%;
+	left: 39.5%;
 	display: flex;
 	flex-direction: column;
 	border: 1px solid black;
+	color: white;
+	padding: 1rem;
+	border-radius: 2rem;
+}
+
+.container > form > div > select, input {
+	border-radius: 1rem;
+	padding: 0.1rem 0.3rem;
+}
+
+.container > form > div > select, input:focus {
+	outline: none;
+}
+
+.nameInput, .durationInput {
+	background-color: inherit;
+	color: white;
+	border: none;
+	border-bottom: 1px solid white;
+	border-radius: 0;
 }
 
 .formInput {
-	border-bottom: 1px solid black;
+	margin: 1.25rem;
+	display: flex;
+	justify-content: space-between;
 }
 
 .blur {
 	background-color: black;
-	opacity: 85%;
+	opacity: 70%;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	filter: blur(64px);
+	filter: blur(128px);
+}
+
+.close {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+
+.closeButton {
+	border-radius: 9999px;
+	border: none;
+	background-color: inherit;
+	transform: scale(1.75);
+	color: red;
+}
+
+.closeButton:hover {
+	transform: scale(2);
+}
+
+.closeButton:focus {
+	outline: none;
+}
+
+.submit {
+	display: flex;
+	justify-content: center;
+	margin-top: 1rem;
+}
+
+.durationInput {
+	width: 2.5rem;
+	text-align: end;
+}
+
+.formCountries {
+	margin: 1rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.formCountries > label {
+	margin-bottom: 1rem;
+}
+
+.formCountries > select {
+	width: fit-content;
+}
+
+.countries > p {
+	margin: 1rem;
+}
+
+.nameInput {
+	margin-left: 2rem;
+	width: 50%;
+}
+
+.submit > input {
+	background-color: inherit;
+	border: none;
+	transform: scale(1.5);
+	margin: 0.5rem 0;
+}
+
+.submit > input:hover {
+	transform: scale(1.75);
+	cursor: pointer;
+}
+
+.submit > input:focus {
+	outline: none;
 }

@@ -7,7 +7,7 @@ export default function Searchbar() {
 	const dispatch = useDispatch();
 	const loadedCountries = useSelector(state => state.loadedCountries);
 	const [formValues, setFormValues] = useState({name: '', filter: ["Continent", "All"], order: ["name", "ASC"], offset: 0});
-	useEffect(() => dispatch(filterCountries(formValues)), [formValues.offset, formValues.name, formValues.filter[0], formValues.filter[1], formValues.order[0], formValues.order[1]]);
+	useEffect(() => dispatch(filterCountries(formValues)), [formValues]);
 
 	function handleChange(event) {
 		let temp = {...formValues, offset: 0};
@@ -38,15 +38,15 @@ export default function Searchbar() {
 	return (
 		<div>
 			<div className = {styles.container}>
-				<form className = {styles.form}>
+				<form className = {styles.form} onSubmit = {event => event.preventDefault()}>
 					<div>
-						<input type= "reset" onClick = {() => setFormValues({name: '', filter: ["Continent", "All"], order: ["name", "ASC"], offset: 0})}/>
+						<input className = {styles.reset} type= "reset" onClick = {() => setFormValues({name: '', filter: ["Continent", "All"], order: ["name", "ASC"], offset: 0})}/>
 					</div>
 					<div>
 						<input className = {styles.nameInput} name = "name" placeholder = "Country..." onChange = {event => handleChange(event)} />
 					</div>
 					<div>
-						<label> Filter by </label>
+						<label> Filter by: </label>
 						<select name = "filterCategory" defaultValue = 'Continent' onChange = {event => handleChangeFilter(event)}>
 							<option> Continent </option>
 							<option> Activities </option>
@@ -73,7 +73,7 @@ export default function Searchbar() {
 						}					
 					</div>
 					<div>
-						<label> Order by </label>
+						<label> Order by: </label>
 						<select name = "orderCategory" defaultValue = 'name' onChange = {event => handleChangeOrder(event)} >
 							<option> name </option>
 							<option> population </option>

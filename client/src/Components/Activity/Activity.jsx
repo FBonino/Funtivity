@@ -32,11 +32,13 @@ export default function Activity() {
 		<div>
 			<div className = {styles.blur}></div>
 			<div className = {styles.container}>
-				<button onClick = {() => dispatch(displayActivityForm())}> X </button>
+				<div className = {styles.close}>
+					<button className = {styles.closeButton} onClick = {() => dispatch(displayActivityForm())}> ✖ </button>
+				</div>
 				<form onSubmit = {event => handleSubmit(event)}>
 					<div className = {styles.formInput}>
 						<label> Name </label> 
-						<input type = "text" placeholder = "name..." name = "name" defaultValue = {formValues.name} onChange = {event => handleChange(event)} required/>
+						<input className = {styles.nameInput} type = "text" name = "name" defaultValue = {formValues.name} onChange = {event => handleChange(event)} required/>
 					</div>
 					<div className = {styles.formInput}>
 						<label> Difficulty </label> 
@@ -50,8 +52,10 @@ export default function Activity() {
 					</div>
 					<div className = {styles.formInput}>
 						<label> Duration </label> 
-						<input placeholder = "duration..." name = "duration" defaultValue = {formValues.duration} onChange = {event => handleChange(event)} pattern = "[1-9][0-9]*" title = "The duration must be a number and greater than 0" />
-						<label> days </label>
+						<div>
+							<input className = {styles.durationInput} name = "duration" defaultValue = {formValues.duration} onChange = {event => handleChange(event)} pattern = "[1-9][0-9]*" title = "The duration must be a number and greater than 0" />
+							<label> days </label>
+						</div>
 					</div>
 					<div className = {styles.formInput}>
 						<label> Season </label> 
@@ -62,7 +66,7 @@ export default function Activity() {
 							<option> FALL </option>
 						</select>
 					</div>
-					<div className = {styles.formInput}>
+					<div className = {styles.formCountries}>
 						<label> Countries </label>
 						<select name = "countries" defaultValue = "-" onChange = {event => addCountry(event)}>
 							<option> - </option>
@@ -72,14 +76,16 @@ export default function Activity() {
 								})
 							}
 						</select>
-						{
-							formValues.countries?.map(country => {
-								return <p key = {country}> {country} </p>
-							})
-						}
+						<div className = {styles.countries}>
+							{
+								formValues.countries?.map(country => {
+									return <p key = {country}> {country} </p>
+								})
+							}
+						</div>
 					</div>
 					<div className = {styles.submit}>
-						<input type = "submit" />
+						<input type = "submit" value = "➕"/>
 					</div>
 				</form>
 			</div>
