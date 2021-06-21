@@ -63,6 +63,7 @@
 
 .closeButton:hover {
 	transform: scale(2);
+	cursor: pointer;
 }
 
 .closeButton:focus {

@@ -35,7 +35,7 @@ export default function Activity() {
 				<div className = {styles.close}>
 					<button className = {styles.closeButton} onClick = {() => dispatch(displayActivityForm())}> ✖ </button>
 				</div>
-				<form onSubmit = {event => handleSubmit(event)}>
+				<form onSubmit = {event => handleSubmit(event)} autocomplete="off">
 					<div className = {styles.formInput}>
 						<label> Name </label> 
 						<input className = {styles.nameInput} type = "text" name = "name" defaultValue = {formValues.name} onChange = {event => handleChange(event)} required/>
@@ -53,7 +53,7 @@ export default function Activity() {
 					<div className = {styles.formInput}>
 						<label> Duration </label> 
 						<div>
-							<input className = {styles.durationInput} name = "duration" defaultValue = {formValues.duration} onChange = {event => handleChange(event)} pattern = "[1-9][0-9]*" title = "The duration must be a number and greater than 0" />
+							<input className = {styles.durationInput} name = "duration" defaultValue = {formValues.duration} onChange = {event => handleChange(event)} pattern = "[1-9][0-9]*" title = "The duration must be a number and greater than 0" required />
 							<label> days </label>
 						</div>
 					</div>

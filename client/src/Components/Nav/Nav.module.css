@@ -1,7 +1,7 @@
 .container {
 	background: linear-gradient(217deg, rgb(0, 11, 73), rgb(41, 6, 73) 90%);
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 	padding: 1rem;
 	margin-bottom: 2.5rem;
@@ -19,6 +19,7 @@
 	font-weight: bold;
 	color: white;
 	font-family: Arial, Helvetica, sans-serif;
+	margin: 0 5rem;
 }
 
 .addActivity:hover {
@@ -33,6 +34,7 @@
 .link {
 	color: white;
 	text-decoration: none;
+	margin: 0 5rem;
 }
 
 .link:hover {

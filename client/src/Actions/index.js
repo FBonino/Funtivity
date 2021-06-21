@@ -29,6 +29,7 @@ export function filterCountries({name, filter, order, offset}) {
 				type: "FILTER_COUNTRIES",
 				payload: data
 			}))
+			.catch(() => alert("Country not found"))
 	}
 }
 

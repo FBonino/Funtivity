@@ -53,6 +53,10 @@
 	transform: scale(1.2);
 }
 
+.page > button:hover {
+	cursor: pointer;
+}
+
 .page > button:focus {
 	outline: none;
 }

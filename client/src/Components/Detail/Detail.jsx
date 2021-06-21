@@ -6,8 +6,8 @@ import Activity from "../Activity/Activity";
 
 export default function Detail({match}) {
 	const dispatch = useDispatch();
-	useEffect(() => dispatch(getCountryByID(match.params.id)), []);
 	const [detailedCountry, displayForm] = useSelector(state => [state.detailedCountry, state.displayForm]);
+	useEffect(() => dispatch(getCountryByID(match.params.id)), [detailedCountry]);
 	return (
 		<div className = {styles.container}>
 			<div className = {styles.detail}>
@@ -29,7 +29,8 @@ export default function Detail({match}) {
 						<th> Season </th>
 					</tr>
 					{
-						detailedCountry.activities?.map(activity => {
+						detailedCountry.activities?.length
+						? detailedCountry.activities?.map(activity => {
 							return (
 								<tr key = {activity}>
 									<td className = {styles.name}> {activity.name} </td>
@@ -39,6 +40,7 @@ export default function Detail({match}) {
 								</tr>
 							)
 						})
+						: <h4> No activities found </h4>
 					}
 				</table>
 				{

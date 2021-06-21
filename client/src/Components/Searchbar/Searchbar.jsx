@@ -38,7 +38,7 @@ export default function Searchbar() {
 	return (
 		<div>
 			<div className = {styles.container}>
-				<form className = {styles.form} onSubmit = {event => event.preventDefault()}>
+				<form className = {styles.form} onSubmit = {event => event.preventDefault()} autocomplete="off">
 					<div>
 						<input className = {styles.reset} type= "reset" onClick = {() => setFormValues({name: '', filter: ["Continent", "All"], order: ["name", "ASC"], offset: 0})}/>
 					</div>

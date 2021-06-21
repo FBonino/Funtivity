@@ -10,7 +10,6 @@ export default function Nav() {
 		<div className = {styles.container}>
 			<Link to = '/home' className = {styles.link}> Home </Link>
 			<button onClick = {() => dispatch(displayActivityForm())} className = {styles.addActivity}> Add activity </button>
-			<Link to = '/about' className = {styles.link}> About </Link>
 		</div>
 	)
 }
