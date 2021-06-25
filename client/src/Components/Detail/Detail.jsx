@@ -7,7 +7,7 @@ import Activity from "../Activity/Activity";
 export default function Detail({match}) {
 	const dispatch = useDispatch();
 	const [detailedCountry, displayForm] = useSelector(state => [state.detailedCountry, state.displayForm]);
-	useEffect(() => dispatch(getCountryByID(match.params.id)), [detailedCountry]);
+	useEffect(() => dispatch(getCountryByID(match.params.id)), []);
 	return (
 		<div className = {styles.container}>
 			<div className = {styles.detail}>

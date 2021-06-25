@@ -95,8 +95,29 @@
 	width: fit-content;
 }
 
-.countries > p {
+.countries {
+	margin: auto;
+}
+
+.countryName {
 	margin: 1rem;
+}
+
+.countryName > input {
+	background-color: inherit;
+	color: white;
+	border: none;
+	text-align: center;
+}
+
+.countryName > input:hover {
+	transform: scale(1.2);
+	cursor: pointer;
+	text-decoration: line-through 3px red;
+}
+
+.countryName > input:focus {
+	outline: none;
 }
 
 .nameInput {

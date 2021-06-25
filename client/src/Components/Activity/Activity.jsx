@@ -28,6 +28,12 @@ export default function Activity() {
 		setFormValues(temp);
 	}
 
+	function removeCountry(event) {
+		let temp = {...formValues};
+		temp.countries = temp.countries.filter(country => country !== event.target.value);
+		setFormValues(temp);
+	}
+
 	return (
 		<div>
 			<div className = {styles.blur}></div>
@@ -79,7 +85,7 @@ export default function Activity() {
 						<div className = {styles.countries}>
 							{
 								formValues.countries?.map(country => {
-									return <p key = {country}> {country} </p>
+									return <div className = {styles.countryName}> <input value = {country} key = {country} onClick = {event => removeCountry(event)} /> </div>
 								})
 							}
 						</div>
