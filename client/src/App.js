@@ -1,5 +1,4 @@
 import { Route, Switch } from 'react-router';
-import './App.css';
 import Landing from './Components/Landing/Landing';
 import Home from './Components/Home/Home';
 import Nav from './Components/Nav/Nav';
