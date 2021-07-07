@@ -1,4 +1,4 @@
-# [Funtivity]()
+# [Funtivity](funtivity.vercel.app)
 
 ### About
 
