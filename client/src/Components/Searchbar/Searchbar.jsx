@@ -7,7 +7,7 @@ export default function Searchbar() {
 	const dispatch = useDispatch();
 	const loadedCountries = useSelector(state => state.loadedCountries);
 	const [formValues, setFormValues] = useState({name: '', filter: ["Continent", "All"], order: ["name", "ASC"], offset: 0});
-	useEffect(() => dispatch(filterCountries(formValues)), [formValues]);
+	useEffect(() => dispatch(filterCountries(formValues)), [formValues, dispatch]);
 
 	function handleChange(event) {
 		let temp = {...formValues, offset: 0};
@@ -38,7 +38,7 @@ export default function Searchbar() {
 	return (
 		<div>
 			<div className = {styles.container}>
-				<form className = {styles.form} onSubmit = {event => event.preventDefault()} autocomplete="off">
+				<form className = {styles.form} onSubmit = {event => event.preventDefault()} autoComplete="off">
 					<div>
 						<input className = {styles.reset} type= "reset" onClick = {() => setFormValues({name: '', filter: ["Continent", "All"], order: ["name", "ASC"], offset: 0})}/>
 					</div>

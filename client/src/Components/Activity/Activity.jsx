@@ -41,14 +41,14 @@ export default function Activity() {
 				<div className = {styles.close}>
 					<button className = {styles.closeButton} onClick = {() => dispatch(displayActivityForm())}> ✖ </button>
 				</div>
-				<form onSubmit = {event => handleSubmit(event)} autocomplete="off">
+				<form onSubmit = {event => handleSubmit(event)} autoComplete="off">
 					<div className = {styles.formInput}>
 						<label> Name </label> 
 						<input className = {styles.nameInput} type = "text" name = "name" defaultValue = {formValues.name} onChange = {event => handleChange(event)} required/>
 					</div>
 					<div className = {styles.formInput}>
 						<label> Difficulty </label> 
-						<select defaultValue = '1' name = "difficulty" defaultValue = {formValues.difficulty} onChange = {event => handleChange(event)}>
+						<select name = "difficulty" defaultValue = {formValues.difficulty} onChange = {event => handleChange(event)}>
 							<option> 1 </option>
 							<option> 2 </option>
 							<option> 3 </option>
@@ -65,7 +65,7 @@ export default function Activity() {
 					</div>
 					<div className = {styles.formInput}>
 						<label> Season </label> 
-						<select defaultValue = "SUMMER" name = "season" defaultValue = {formValues.season} onChange = {event => handleChange(event)}>
+						<select name = "season" defaultValue = {formValues.season} onChange = {event => handleChange(event)}>
 							<option> SUMMER </option>
 							<option> WINTER </option>
 							<option> SPRING </option>

@@ -11,7 +11,7 @@ export default function Home() {
 	useEffect(() => {
 		dispatch(getCountries());
 		dispatch(getAllCountries());
-	}, []);
+	}, [dispatch]);
 	return (
 		<div>
 			<Searchbar />
