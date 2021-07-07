@@ -2,7 +2,7 @@
 
 ### About
 
-Project created during Henry's bootcamp as an individual examination instance. Using the [Rest Countries API](https://restcountries.eu/rest/v2/all) I created a database, backend and frontend and later deployed the SPA (single page application) to Vercel and Heroku. The app allows the user to add activities (with their difficulty, duration and season when it can be done) and asign them to any country, search for a country by it's name, filter by continent or activity difficulty, order results alphabetically or by the cities population(both ascending and descending), and access a country's details with the activities it has included.
+Project created during Henry's bootcamp as an individual examination instance. Using the [Rest Countries API](https://restcountries.eu/rest/v2/all) I created a database, backend and frontend and later deployed the SPA (single page application) to Vercel, Heroku and ElephantSQL. The app allows the user to add activities (with their difficulty, duration and season when it can be done) and asign them to any country, search for a country by it's name, filter by continent or activity difficulty, order results alphabetically or by the cities population(both ascending and descending), and access a country's details with the activities it has included.
 
 </br>
 
@@ -12,8 +12,8 @@ Frontend:
 
 * ReactJS
 * Redux
-*	HTML
 * CSS
+* HTML
 
 Backend:
 
@@ -37,7 +37,7 @@ As the landing page is loaded a request to the backend is sent and the database 
 
 <table width = "60%">
 	<tr>
-		<th> Countries list </th>
+		<th> Countries list with filters and orders applied </th>
 		<th> Country detail with activities list </th>
 	</tr>
 	<tr>
@@ -56,9 +56,14 @@ As the landing page is loaded a request to the backend is sent and the database 
 		<th> Open city detail and add an activity </th>
 	</tr>
 	<tr>
-		<td> <img src = "./assets/" alt = "" width = "100%"> </td>
-		<td> <img src = "./assets/" alt = "" width = "100%"> </td>
+		<td> <img src = "./assets/countries1.png" alt = "" width = "100%"> </td>
+		<td> <img src = "./assets/countries2.png" alt = "" width = "100%"> </td>
 	</tr>
 </table>
 
 </br>
+
+### Future updates
+
+* Fix responsiveness (style looks bad at some resolutions)
+* Add more features (possibly integrating other APIs) such as country's weather in the detail
