@@ -43,7 +43,6 @@ As the landing page is loaded a request to the backend is sent and the database 
 	<tr>
 		<td> <img src = "./assets/countries1.png" alt = "" width = "100%"> </td>
 		<td> <img src = "./assets/countries2.png" alt = "" width = "100%"> </td>
-		
 	</tr>
 </table>
 
