@@ -38,7 +38,7 @@ As the landing page is loaded a request to the backend is sent and the database 
 <table width = "60%">
 	<tr>
 		<th> Countries list with filters and orders applied </th>
-		<th> Country detail with activities list </th>
+		<th> Country detail with activity list </th>
 	</tr>
 	<tr>
 		<td> <img src = "./assets/countries1.png" alt = "" width = "100%"> </td>
@@ -56,8 +56,8 @@ As the landing page is loaded a request to the backend is sent and the database 
 		<th> Open city detail and add an activity </th>
 	</tr>
 	<tr>
-		<td> <img src = "./assets/" alt = "" width = "100%"> </td>
-		<td> <img src = "./assets/" alt = "" width = "100%"> </td>
+		<td> <img src = "./assets/countries3.gif" alt = "" width = "100%"> </td>
+		<td> <img src = "./assets/countries4.gif" alt = "" width = "100%"> </td>
 	</tr>
 </table>
 
@@ -65,5 +65,6 @@ As the landing page is loaded a request to the backend is sent and the database 
 
 ### Future updates
 
+* Fix bugs (activities not showing as soon as they are created in the detail tab)
 * Fix responsiveness (style looks bad at some resolutions)
 * Add more features (possibly integrating other APIs) such as country's weather in the detail
