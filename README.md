@@ -8,22 +8,27 @@ Project created during Henry's bootcamp as an individual examination instance. U
 
 ### Tecnologies
 
-Frontend:
-
-* ReactJS
-* Redux
-* CSS
-* HTML
-
-Backend:
-
-* NodeJS
-* Express
-
-Database:
-
-* PostgreSQL
-* Sequelize
+<table width = "75%" align = "center" border = "2px">
+	<tr>
+		<th style = "text-align: center;"> Frontend </th>
+		<th style = "text-align: center;"> Backend </th>
+		<th style = "text-align: center;"> Database </th>
+	</tr>
+	<tr>
+		<td>
+			<div style = "display: flex; justify-content: space-evenly;"> <p> ReactJS </p> <p> Redux </p> </div>
+			<div style = "display: flex; justify-content: space-evenly;"> <p> HTML </p> <p> CSS </p> </div>
+		</td>
+		<td>
+			<p align = "center"> NodeJS </p> 
+			<p align = "center"> Express </p>
+		</td>
+		<td>
+			<p align = "center"> PostgreSQL </p> 
+			<p align = "center"> Sequelize </p>
+		</td>
+	</tr>
+</table>
 
 </br>
 
@@ -35,7 +40,7 @@ As the landing page is loaded a request to the backend is sent and the database 
 
 ### Preview snapshots
 
-<table width = "60%">
+<table width = "65%" align = "center">
 	<tr>
 		<th> Countries list with filters and orders applied </th>
 		<th> Country detail with activity list </th>
@@ -50,7 +55,7 @@ As the landing page is loaded a request to the backend is sent and the database 
 
 ### Preview usage
 
-<table width = "60%">
+<table width = "65%" align = "center">
 	<tr>
 		<th> Search a country by name and filter and order results </th>
 		<th> Open city detail and add an activity </th>
