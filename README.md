@@ -16,15 +16,15 @@ Project created during Henry's bootcamp as an individual examination instance. U
 	</tr>
 	<tr>
 		<td>
-			<div align = "center"> <p> ReactJS &nbsp;&nbsp; CSS </p> </div>
-			<div align = "center"> <p> Redux &nbsp;&nbsp; HTML </p> </div>
+			<p align = "center" style = "margin-top: 10px; padding: 25px"> React.js &nbsp;&nbsp; CSS </p>
+			<p align = "center" style = "margin-top: 10px; padding: 25px"> Redux &nbsp;&nbsp; HTML </p>
 		</td>
 		<td>
-			<p align = "center" style = "margin-top: 10px;"> NodeJS </p> 
+			<p align = "center" style = "margin-top: 10px; padding: 25px"> Node.js </p> 
 			<p align = "center"> Express </p>
 		</td>
 		<td>
-			<p align = "center" style = "margin-top: 10px;"> PostgreSQL </p> 
+			<p align = "center" style = "margin-top: 10px; padding: 25px"> PostgreSQL </p> 
 			<p align = "center"> Sequelize </p>
 		</td>
 	</tr>
