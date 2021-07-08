@@ -16,8 +16,8 @@ Project created during Henry's bootcamp as an individual examination instance. U
 	</tr>
 	<tr>
 		<td>
-			<div align = "center"> <p> ReactJS Redux </p> </div>
-			<div align = "center"> <p> HTML CSS </p> </div>
+			<div align = "center"> <p> ReactJS &nbsp;&nbsp; Redux </p> </div>
+			<div align = "center"> <p> HTML &nbsp;&nbsp; CSS </p> </div>
 		</td>
 		<td>
 			<p align = "center" style = "margin-top: 10px;"> NodeJS </p> 
