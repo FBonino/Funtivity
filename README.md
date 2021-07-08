@@ -16,8 +16,8 @@ Project created during Henry's bootcamp as an individual examination instance. U
 	</tr>
 	<tr>
 		<td>
-			<div style = "display: flex; justify-content: space-evenly; margin-top: 10px;"> <p> ReactJS </p> <p> Redux </p> </div>
-			<div style = "display: flex; justify-content: space-evenly;"> <p> HTML </p> <p> CSS </p> </div>
+			<div align = "center"> <p> ReactJS </p> <p> Redux </p> </div>
+			<div align = "center"> <p> HTML </p> <p> CSS </p> </div>
 		</td>
 		<td>
 			<p align = "center" style = "margin-top: 10px;"> NodeJS </p> 
