@@ -5,7 +5,7 @@ import axios from 'axios';
 import video from "../../media/FrancoPi.mp4";
 
 
-axios.get('http://localhost:3001/start');
+axios.get('https://funtivity.herokuapp.com/start');
 
 export default function Landing() {
 	const history = useHistory();

@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-// const BACKEND_URI = 'https://funtivity.herokuapp.com';
-const BACKEND_URI = 'http://localhost:3001';
+const BACKEND_URI = 'https://funtivity.herokuapp.com';
 
 export function getCountries() {
 	return function (dispatch) {

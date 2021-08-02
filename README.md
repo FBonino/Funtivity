@@ -2,7 +2,7 @@ Funtivity
 
 ### About
 
-Project created during Henry's bootcamp as an individual examination instance. Using the [Rest Countries API](https://restcountries.eu/rest/v2/all/) I created a database, backend and frontend and later deployed the SPA (single page application) to Vercel, Heroku and ElephantSQL. The app allows the user to add activities (with their difficulty, duration and season when it can be done) and asign them to any country, search for a country by it's name, filter by continent or activity difficulty, order results alphabetically or by the cities population(both ascending and descending), and access a country's details with the activities it has included.
+Project created during Henry's bootcamp as an individual examination instance. Using the [Rest Countries API](https://restcountries.eu/rest/v2/all/) I created a database, backend and frontend and later deployed the SPA (single page application) to Vercel and Heroku (using Heroku Postgres for the database). The app allows the user to add activities (with their difficulty, duration and season when they can be done) and asign them to any country, search for a country by it's name, filter by continent or activity difficulty, order results alphabetically or by the cities population(both ascending and descending), and access a country's details with the activities it has included.
 
 </br>
 

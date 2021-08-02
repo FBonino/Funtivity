@@ -17,8 +17,7 @@ export default function Activity() {
 
 	async function handleSubmit(event) {
 		event.preventDefault();
-		// await axios.post('https://funtivity.herokuapp.com/activity', {...formValues, countries: formValues.countries.join(',')});
-		await axios.post('http://localhost:3001/activity', { ...formValues, countries: formValues.countries.join(',') });
+		await axios.post('https://funtivity.herokuapp.com/activity', { ...formValues, countries: formValues.countries.join(',') });
 		dispatch(displayActivityForm());
 	}
 
