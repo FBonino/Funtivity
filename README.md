@@ -6,7 +6,7 @@ Project created during Henry's bootcamp as an individual examination instance. U
 
 </br>
 
-### Tecnologies
+### Technologies
 
 <table width = "70%" align = "center" border = "2px">
 	<tr>
