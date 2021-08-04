@@ -70,7 +70,6 @@ As the landing page is loaded a request to the backend is sent and the database 
 
 ### Future updates
 
-* Fix bugs (activities not showing as soon as they are created in the detail tab)
 * Fix responsiveness (style looks bad at some resolutions)
 * Add more features (possibly integrating other APIs) such as country's weather in the detail
 * Add _About_ section including information about the project and links to GitHub/LinkedIn
